@@ -34,6 +34,7 @@ public class GenCommon {
                             .entityBuilder()
                             .idType(IdType.AUTO)
                             .enableLombok()
+                            .addIgnoreColumns("create_user", "update_user")
                             .enableTableFieldAnnotation()
                             .logicDeleteColumnName("deleted")
                             .controllerBuilder()
