@@ -17,3 +17,7 @@ spring:
     expose-session-attributes: true
     suffix: .ftl
     template-loader-path: classpath:/webapp/
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
