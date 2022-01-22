@@ -62,6 +62,12 @@
             <optional>true</optional>
             <version>${lombok.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/cn.hutool/hutool-all -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.7.20</version>
+        </dependency>
         <!-- 敏捷开发 end -->
 
         <dependency>
