@@ -48,6 +48,13 @@
         </dependency>
         <!-- 数据库相关 end  -->
 
+        <!-- 敏捷开发 start -->
+        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>3.0.0</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -55,6 +62,8 @@
             <optional>true</optional>
             <version>${lombok.version}</version>
         </dependency>
+        <!-- 敏捷开发 end -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
