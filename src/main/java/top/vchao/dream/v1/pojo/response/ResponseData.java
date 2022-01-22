@@ -35,6 +35,20 @@ public class ResponseData {
     }
 
     /**
+     * 成功返回 - 设置数据
+     */
+    public static <T> ResponseData success(T object) {
+        return new SuccessResponseData<>(object);
+    }
+
+    /**
+     * 成功返回 - 设置消息 和 数据
+     */
+    public static <T> ResponseData success(String message, T object) {
+        return new SuccessResponseData<>(message, object);
+    }
+
+    /**
      * 默认失败返回
      */
     public static ResponseData error() {
