@@ -11,7 +11,8 @@ public class GenCommon {
     public static String url = "jdbc:mysql://182.92.235.182:3306/dream?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT&nullCatalogMeansCurrent=true";
     public static String username = "vchao";
     public static String password = "vchao123";
-    public static String packageName = "top.vchao.dream.v1";
+    public static String packageName = "top.vchao.dream";
+    public static String version = "v1";
 
     public static FastAutoGenerator getAutoGenerator(String moduleName, String tableName) {
         String projectDir = System.getProperty("user.dir");
@@ -24,9 +25,12 @@ public class GenCommon {
                             .outputDir(projectDir + "/src/main/java/"); // 指定输出目录
                 })
                 .packageConfig(builder -> {
-                    builder.parent(packageName) // 设置父包名
+                    builder.parent(packageName + "." + version) // 设置父包名
                             .moduleName(moduleName)
                             .pathInfo(Collections.singletonMap(OutputFile.mapperXml, projectDir + "/src/main/resources/mybatis")); // 设置mapperXml生成路径
+                })
+                .injectionConfig(builder -> {
+                    builder.customMap(Collections.singletonMap("version", version));
                 })
                 .strategyConfig(builder -> {
                     builder.addInclude(tableName) // 设置需要生成的表名
