@@ -1,4 +1,4 @@
-package ${package.Other}request;
+package ${package.Other}${entity}.request;
 
 import lombok.Getter;
 import lombok.Setter;
