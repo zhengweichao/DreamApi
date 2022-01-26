@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.OutputFile;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
+import top.vchao.dream.generate.util.StringUtil;
 
 import java.util.Collections;
 
@@ -27,10 +28,12 @@ public class GenCommon {
                 .packageConfig(builder -> {
                     builder.parent(packageName + "." + version) // 设置父包名
                             .moduleName(moduleName)
+                            .other("")
                             .pathInfo(Collections.singletonMap(OutputFile.mapperXml, projectDir + "/src/main/resources/mybatis")); // 设置mapperXml生成路径
                 })
                 .injectionConfig(builder -> {
-                    builder.customMap(Collections.singletonMap("version", version));
+                    builder.customMap(Collections.singletonMap("version", version))
+                            .customFile(Collections.singletonMap("request/" + StringUtil.firstUp(moduleName) + "Request.java", "/templates/request.java.ftl"));
                 })
                 .strategyConfig(builder -> {
                     builder.addInclude(tableName) // 设置需要生成的表名
