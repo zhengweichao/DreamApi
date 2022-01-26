@@ -1,5 +1,6 @@
 package top.vchao.dream.v1.pojo.response;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -35,14 +36,21 @@ public class ResponseData {
     }
 
     /**
-     * 成功返回 - 设置数据
+     * 成功返回 - 数据
      */
     public static <T> ResponseData success(T object) {
         return new SuccessResponseData<>(object);
     }
 
     /**
-     * 成功返回 - 设置消息 和 数据
+     * 成功返回 - 分页数据
+     */
+    public static <T> ResponseData successPage(Page<T> page) {
+        return new SuccessResponseData<>(new PageResponse<>(page));
+    }
+
+    /**
+     * 成功返回 - 消息 和 数据
      */
     public static <T> ResponseData success(String message, T object) {
         return new SuccessResponseData<>(message, object);

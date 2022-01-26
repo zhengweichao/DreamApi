@@ -30,6 +30,12 @@ public class BaseRequest {
     }
 
     /**
+     * 参数校验分组：查 - 分页
+     */
+    public @interface page {
+    }
+
+    /**
      * 参数校验分组：查 - 详情
      */
     public @interface detail {
