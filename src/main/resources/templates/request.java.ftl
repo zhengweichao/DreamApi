@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 import top.vchao.dream.v1.pojo.request.PageRequest;
@@ -39,7 +40,11 @@ public class ${entity}Request extends PageRequest implements Serializable {
     private ${field.propertyType} ${field.propertyName};
         <#else>
         <#-- 普通字段 -->
+            <#if field.propertyType == "String">
+    @NotBlank(message = "请输入${field.comment}", groups = {add.class})
+            <#else>
     @NotNull(message = "请输入${field.comment}", groups = {add.class})
+            </#if>
     private ${field.propertyType} ${field.propertyName};
         </#if>
 
