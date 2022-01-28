@@ -1,33 +1,54 @@
 package top.vchao.dream.v1.question.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+import top.vchao.dream.v1.pojo.request.BaseRequest;
+import top.vchao.dream.v1.pojo.response.ResponseData;
+import top.vchao.dream.v1.question.Question.request.QuestionRequest;
 import top.vchao.dream.v1.question.entity.Question;
 import top.vchao.dream.v1.question.service.IQuestionService;
 
 import javax.annotation.Resource;
-import java.util.List;
-
 
 /**
- * 前端控制器
+ * 面试题目接口
  */
 @RestController
 @RequestMapping("/v1/question")
 public class QuestionController {
 
     @Resource
-    IQuestionService mIQuestionService;
+    IQuestionService iQuestionService;
 
     @GetMapping("/page")
-    public List<Question> page() {
-        return mIQuestionService.list();
+    public ResponseData page(@Validated(BaseRequest.page.class) QuestionRequest request) {
+        Page<Question> page = iQuestionService.page(request);
+        return ResponseData.successPage(page);
     }
 
-    @GetMapping("/get_detail")
-    public Question getDetail() {
-        return mIQuestionService.list().get(0);
+    @GetMapping("/detail")
+    public ResponseData detail(@Validated(BaseRequest.detail.class) QuestionRequest request) {
+        Question bean = iQuestionService.detail(request.getId());
+        return ResponseData.success(bean);
+    }
+
+    @PostMapping("/add")
+    public ResponseData add(@Validated(BaseRequest.add.class) QuestionRequest request) {
+        iQuestionService.save(request);
+        return ResponseData.success();
+    }
+
+    @DeleteMapping("/delete")
+    public ResponseData delete(@Validated(BaseRequest.delete.class) QuestionRequest request) {
+        iQuestionService.remove(request.getId());
+        return ResponseData.success();
+    }
+
+    @PutMapping("/update")
+    public ResponseData update(@Validated(BaseRequest.update.class) QuestionRequest request) {
+        iQuestionService.update(request);
+        return ResponseData.success();
     }
 
 }

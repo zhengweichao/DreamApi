@@ -1,21 +1,15 @@
 package top.vchao.dream.v1.question.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.Getter;
-import lombok.Setter;
-
 /**
  * <p>
- *
+ * 面试题目
  * </p>
  *
  * @author vchao
@@ -32,50 +26,56 @@ public class Question implements Serializable {
     private Integer id;
 
     /**
-     * 题目
+     * 题目标题
      */
     @TableField("qt_title")
     private String title;
 
     /**
-     * 难度
+     * 难度等级[1高、2中、3低]
      */
     @TableField("qt_level")
     private Integer level;
 
     /**
-     * 题目内容
+     * 内容
      */
     @TableField("qt_content")
     private String content;
 
     /**
-     * 题目考验能力
+     * 考验能力
      */
     @TableField("qt_ability")
     private String ability;
 
     /**
-     * 题目类型-[1单选、2判断、3问答]
+     * 类型[1单选、2判断、3问答]
      */
     @TableField("qt_type")
     private Integer type;
 
     /**
-     * 题目答案（问答题均略）
+     * 答案概要
      */
     @TableField("qt_answer")
     private String answer;
 
     /**
-     * 题目备注
+     * 备注
      */
     @TableField("qt_remark")
     private String remark;
 
+    /**
+     * 创建时间
+     */
     @TableField("create_time")
     private LocalDateTime createTime;
 
+    /**
+     * 更新时间
+     */
     @TableField("update_time")
     private LocalDateTime updateTime;
 

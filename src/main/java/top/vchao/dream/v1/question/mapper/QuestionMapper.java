@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
- *  Mapper 接口
+ * 面试题目 Mapper 接口
  * </p>
  *
  * @author vchao
