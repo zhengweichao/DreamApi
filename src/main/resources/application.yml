@@ -19,6 +19,7 @@ spring:
     expose-session-attributes: true
     suffix: .ftl
     template-loader-path: classpath:/webapp/
+    checkTemplateLocation: false
 
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
