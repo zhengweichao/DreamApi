@@ -15,7 +15,9 @@ import ${superControllerClassPackage};
 </#if>
 
 import top.vchao.dream.v1.pojo.request.BaseRequest;
+import top.vchao.dream.v1.pojo.response.PageResponse;
 import top.vchao.dream.v1.pojo.response.ResponseData;
+import top.vchao.dream.v1.pojo.response.SuccessResponseData;
 import ${package.Entity}.${entity};
 import ${package.Service}.${table.serviceName};
 import ${package.Other}${entity}.request.${entity}Request;
@@ -44,13 +46,13 @@ public class ${table.controllerName} {
     ${table.serviceName} ${table.serviceName?uncap_first};
 
     @GetMapping("/page")
-    public ResponseData page(@Validated(BaseRequest.page.class)${entity}Request request) {
+    public SuccessResponseData<PageResponse<${entity}>> page(@Validated(BaseRequest.page.class)${entity}Request request) {
         Page<${entity}> page = ${table.serviceName?uncap_first}.page(request);
         return ResponseData.successPage(page);
     }
 
     @GetMapping("/detail")
-    public ResponseData detail(@Validated(BaseRequest.detail.class)${entity}Request request) {
+    public SuccessResponseData<${entity}> detail(@Validated(BaseRequest.detail.class)${entity}Request request) {
         ${entity} bean = ${table.serviceName?uncap_first}.detail(request.getId());
         return ResponseData.success(bean);
     }
