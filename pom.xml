@@ -123,9 +123,9 @@
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
                 <includes>
-                    <include>*.yml</include>
                     <include>application-${spring.active}.yml</include>
                     <include>*</include>
+                    <include>*/*</include>
                 </includes>
             </resource>
         </resources>
