@@ -38,21 +38,21 @@ public class ResponseData {
     /**
      * 成功返回 - 数据
      */
-    public static <T> ResponseData success(T object) {
+    public static <T> SuccessResponseData<T> success(T object) {
         return new SuccessResponseData<>(object);
     }
 
     /**
      * 成功返回 - 分页数据
      */
-    public static <T> ResponseData successPage(Page<T> page) {
+    public static <T> SuccessResponseData<PageResponse<T>> successPage(Page<T> page) {
         return new SuccessResponseData<>(new PageResponse<>(page));
     }
 
     /**
      * 成功返回 - 消息 和 数据
      */
-    public static <T> ResponseData success(String message, T object) {
+    public static <T> SuccessResponseData<T> success(String message, T object) {
         return new SuccessResponseData<>(message, object);
     }
 
