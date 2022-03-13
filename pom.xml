@@ -6,7 +6,20 @@
     <artifactId>dream-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>dream-api</name>
-    <description>Demo project for Spring Boot</description>
+    <description>A quick development scaffolding project based on spring Boot API.</description>
+    <url>https://github.com/zhengweichao/DreamApi</url>
+    <licenses>
+        <license>
+            <name>GNU General Public License v3.0</name>
+            <url>https://github.com/zhengweichao/DreamApi/blob/master/LICENSE</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>vchao</name>
+            <email>code@vchao.top</email>
+        </developer>
+    </developers>
 
     <properties>
         <java.version>1.8</java.version>
