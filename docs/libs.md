@@ -9,6 +9,11 @@
 Spring Boot是由 Pivotal 团队提供的全新框架。其设计目的是用来简化新Spring应用的初始搭建以及开发过程。
 该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。通过这种方式，Spring Boot致力于在蓬勃发展的快速应用开发领域(rapid application development)成为领导者。
 
+本项目依赖多个组件：
+- spring-boot-starter-freemarker：[Maven](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-freemarker)
+- spring-boot-starter-validation: [Maven](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation)
+- spring-boot-starter-web: [Maven](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web)
+- spring-boot-starter-test: [Maven](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test)
 
 
 ## 2. MyBatis-Plus
@@ -20,6 +25,10 @@ MyBatis-Plus （简称 MP）是一个  [MyBatis](https://www.mybatis.org/mybatis
 - **无侵入**：只做增强不做改变，引入它不会对现有工程产生影响，如丝般顺滑
 - **损耗小**：启动即会自动注入基本 CURD，性能基本无损耗，直接面向对象操作
 - **强大的 CRUD 操作**：内置通用 Mapper、通用 Service，仅仅通过少量配置即可实现单表大部分 CRUD 操作，更有强大的条件构造器，满足各类使用需求
+
+本项目依赖多个组件：
+- mybatis-plus-boot-starter：[Maven](https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter)
+- mybatis-plus-generator: [Maven](https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-generator)
 
 
 
