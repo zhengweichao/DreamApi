@@ -7,6 +7,7 @@ import ${pkg};
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 </#if>
+import com.fasterxml.jackson.annotation.JsonIgnore;
 <#if entityLombokModel>
 import lombok.Getter;
 import lombok.Setter;
@@ -90,6 +91,7 @@ public class ${entity} {
     <#-- 逻辑删除注解 -->
     <#if field.logicDeleteField>
     @TableLogic
+    @JsonIgnore
     </#if>
     private ${field.propertyType} ${field.propertyName};
 </#list>
