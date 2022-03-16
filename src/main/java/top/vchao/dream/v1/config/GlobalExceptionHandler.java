@@ -1,6 +1,7 @@
 package top.vchao.dream.v1.config;
 
 import cn.hutool.core.util.StrUtil;
+import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
@@ -63,6 +64,14 @@ public class GlobalExceptionHandler {
         }
         //最终把首部的逗号去掉
         return StrUtil.removePrefix(stringBuilder.toString(), ",");
+    }
+
+    /**
+     * 拦截数据库连接错误
+     */
+    @ExceptionHandler(CannotGetJdbcConnectionException.class)
+    public ErrorResponseData cannotGetJdbcConnectionException(CannotGetJdbcConnectionException e) {
+        return new ErrorResponseData(ResponseEnum.ERROR.getCode(), e.getLocalizedMessage());
     }
 
 }
