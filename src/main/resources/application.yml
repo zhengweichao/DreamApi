@@ -30,3 +30,8 @@ spring:
 mybatis-plus:
   global-config:
     banner: false
+
+# 项目设置
+dream-api:
+  # 是否展示 helloController 中的接口（默认展示）
+  show-hello: true

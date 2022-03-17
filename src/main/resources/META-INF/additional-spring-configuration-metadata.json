@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "dream-api.show-hello",
+      "type": "java.lang.Boolean",
+      "description": "是否保留 HelloController 中的接口."
+    }
+  ]
+}
