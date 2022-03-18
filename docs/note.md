@@ -13,3 +13,6 @@
 - https://blog.csdn.net/u013014636/article/details/106314798
 - https://blog.csdn.net/qq_20094173/article/details/106864650
 - https://bbs.csdn.net/topics/392073765
+
+## 黑白名单
+- https://blog.csdn.net/java_helloworld_/article/details/106745630
