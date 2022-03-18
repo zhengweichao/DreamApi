@@ -15,6 +15,7 @@ Spring Boot是由 Pivotal 团队提供的全新框架。其设计目的是用来
 - spring-boot-starter-web: [Maven](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web)
 - spring-boot-starter-test: [Maven](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test)
 - spring-boot-starter-aop: [Maven](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-aop)
+- (可选)spring-boot-configuration-processor: [Maven](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-configuration-processor)
 
 ## 2. MyBatis-Plus
 
