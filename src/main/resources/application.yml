@@ -35,3 +35,5 @@ mybatis-plus:
 dream-api:
   # 是否展示 helloController 中的接口（默认展示）
   show-hello: true
+  # IP 访问策略 （white、black、none）
+  access-strategy: none

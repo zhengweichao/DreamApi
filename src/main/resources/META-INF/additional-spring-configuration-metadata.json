@@ -4,6 +4,11 @@
       "name": "dream-api.show-hello",
       "type": "java.lang.Boolean",
       "description": "是否保留 HelloController 中的接口."
+    },
+    {
+      "name": "dream-api.access-strategy",
+      "type": "java.lang.String",
+      "description": "IP访问策略 （white、black、none）."
     }
   ]
 }
