@@ -28,6 +28,7 @@ public enum ResponseEnum {
     DATA_REPEAT(403, "数据已存在"),
     ACTION_ERROR(403, "操作失败"),
     FREQUENTLY_REQUEST(403, "请求过于频繁"),
+    BLACK_IP(403, "您所在的网络已经被限制访问"),
 
     // 请求方式错误
     NOT_SUPPORT(405, "请求方式错误"),

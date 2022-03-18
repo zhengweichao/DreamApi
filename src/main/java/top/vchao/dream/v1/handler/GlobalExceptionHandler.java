@@ -1,4 +1,4 @@
-package top.vchao.dream.v1.config;
+package top.vchao.dream.v1.handler;
 
 import cn.hutool.core.util.StrUtil;
 import org.springframework.jdbc.CannotGetJdbcConnectionException;
@@ -9,6 +9,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import top.vchao.dream.v1.exception.BlackIpException;
 import top.vchao.dream.v1.pojo.response.ErrorResponseData;
 import top.vchao.dream.v1.pojo.response.ResponseEnum;
 
@@ -72,6 +73,14 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(CannotGetJdbcConnectionException.class)
     public ErrorResponseData cannotGetJdbcConnectionException(CannotGetJdbcConnectionException e) {
         return new ErrorResponseData(ResponseEnum.ERROR.getCode(), e.getLocalizedMessage());
+    }
+
+    /**
+     * 拦截黑名单访问错误
+     */
+    @ExceptionHandler(BlackIpException.class)
+    public ErrorResponseData blackIpException(BlackIpException e) {
+        return new ErrorResponseData(ResponseEnum.BLACK_IP);
     }
 
 }
