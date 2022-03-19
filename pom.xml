@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>top.vchao</groupId>
     <artifactId>dream-api</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <name>dream-api</name>
     <description>A quick development scaffolding project based on spring Boot API.</description>
     <url>https://github.com/zhengweichao/DreamApi</url>
