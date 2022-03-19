@@ -37,3 +37,7 @@ dream-api:
   show-hello: true
   # IP 访问策略 （white、black、none）
   access-strategy: none
+  # 白名单列表（仅在白名单策略时生效）
+  white-list:
+    - 127.0.0.1
+    - 192.168.1.195
