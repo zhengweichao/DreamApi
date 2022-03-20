@@ -16,3 +16,9 @@
 
 ## 黑白名单
 - https://blog.csdn.net/java_helloworld_/article/details/106745630
+
+## 定时任务
+- 在线corn: http://cron.ciding.cc/
+
+- https://zhuanlan.zhihu.com/p/79644891
+- https://www.jianshu.com/p/1defb0f22ed1
