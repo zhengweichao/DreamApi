@@ -24,3 +24,8 @@
 - https://www.jianshu.com/p/1defb0f22ed1
 - [SpringBoot整合Quartz实现定时任务](https://blog.csdn.net/pan_junbiao/article/details/109556822)
 - [Quartz 整合springboot 动态添加、修改和删除定时任务](https://blog.csdn.net/liao0801_123/article/details/95612495)
+
+
+## 发送消息
+- https://gitee.com/zhongfucheng/austin
+- https://gitee.com/jaemon/dingtalk-spring-boot-starter

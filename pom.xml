@@ -100,6 +100,14 @@
         </dependency>
         <!-- 定时任务 end-->
 
+        <!-- 企业微信、钉钉消息推送 start-->
+        <dependency>
+            <groupId>com.github.answerail</groupId>
+            <artifactId>dinger-spring-boot-starter</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+        <!-- 企业微信、钉钉消息推送 end-->
+
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-configuration-processor -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
