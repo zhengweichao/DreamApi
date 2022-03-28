@@ -54,7 +54,7 @@ public class AccessStrategyInterceptor {
             }
         } else {
             // 白名单策略 -> 仅限白名单访问
-            if (!isWhiteIp(ip)) {
+            if (!dreamApiConfig.isWhiteIp(ip)) {
                 // 不在白名单，则直接抛出异常
                 throw new NoWhiteIpException();
             }
@@ -69,14 +69,6 @@ public class AccessStrategyInterceptor {
     public boolean isBlackIp(String ip) {
         //  TODO 此处仅用作测试功能，后续会将黑名单 ip 维护在 redis 中
         return "192.168.1.195".equals(ip);
-    }
-
-    /**
-     * 查看 IP 是否在白名单中
-     */
-    public boolean isWhiteIp(String ip) {
-        //  TODO 此处仅用作测试功能
-        return "127.0.0.1".equals(ip);
     }
 
 }

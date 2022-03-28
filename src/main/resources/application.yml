@@ -8,6 +8,13 @@ spring:
   #  数据库设置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
+  dinger:
+    project-id: ${spring.application.name}
+    dingers:
+      # 使用钉钉机器人, 请根据自己机器人配置信息进行修改
+      dingtalk:
+        tokenId: 7fba34f1f7c9011da0614c89b8456a1129a1c58aa8664b93b5673ee6631a2532
+        secret: SEC666d491c6562a8b6074f168bcae9a76dc70b911268bb5c806c5720980f998653
 
   freemarker:
     cache: false
@@ -37,3 +44,8 @@ dream-api:
   show-hello: true
   # IP 访问策略 （white、black、none）
   access-strategy: none
+  # 白名单列表（仅在白名单策略时生效）
+  white-list:
+    - 127.0.0.1
+    - 192.168.1.195
+

@@ -1,11 +1,15 @@
 package top.vchao.dream.v1.question.entity;
 
-import com.baomidou.mybatisplus.annotation.*;
-import lombok.Getter;
-import lombok.Setter;
-
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * <p>
@@ -13,7 +17,6 @@ import java.time.LocalDateTime;
  * </p>
  *
  * @author vchao
- * @since 2022-01-16
  */
 @Getter
 @Setter
@@ -84,6 +87,7 @@ public class Question implements Serializable {
      */
     @TableField("deleted")
     @TableLogic
+    @JsonIgnore
     private Boolean deleted;
 
 

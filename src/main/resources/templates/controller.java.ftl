@@ -32,7 +32,7 @@ import javax.annotation.Resource;
 <#else>
 @Controller
 </#if>
-@RequestMapping("/${version}<#if package.ModuleName?? && package.ModuleName != "">/${package.ModuleName}</#if>")
+@RequestMapping("/${apiVersion}<#if package.ModuleName?? && package.ModuleName != "">/${package.ModuleName}</#if>")
 <#if kotlin>
 class ${table.controllerName}<#if superControllerClass??> : ${superControllerClass}()</#if>
 <#else>

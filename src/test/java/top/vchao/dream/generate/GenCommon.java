@@ -9,7 +9,9 @@ import top.vchao.dream.generate.util.StringUtil;
 import java.util.Collections;
 
 public class GenCommon {
-    public static String url = "jdbc:mysql://182.92.235.182:3306/dream?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT&nullCatalogMeansCurrent=true";
+    public static String url = "jdbc:mysql://182.92.235.182:3306/dream?autoReconnect=true&useUnicode=true" +
+            "&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL" +
+            "&useSSL=false&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true";
     public static String username = "vchao";
     public static String password = "vchao123";
     public static String packageName = "top.vchao.dream";
@@ -32,7 +34,7 @@ public class GenCommon {
                             .pathInfo(Collections.singletonMap(OutputFile.mapperXml, projectDir + "/src/main/resources/mybatis")); // 设置mapperXml生成路径
                 })
                 .injectionConfig(builder -> {
-                    builder.customMap(Collections.singletonMap("version", version))
+                    builder.customMap(Collections.singletonMap("apiVersion", version))
                             .customFile(Collections.singletonMap("request/" + StringUtil.firstUp(moduleName) + "Request.java", "/templates/request.java.ftl"));
                 })
                 .strategyConfig(builder -> {

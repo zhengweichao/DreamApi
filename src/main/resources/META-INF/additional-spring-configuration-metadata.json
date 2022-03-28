@@ -9,6 +9,11 @@
       "name": "dream-api.access-strategy",
       "type": "java.lang.String",
       "description": "IP访问策略 （white、black、none）."
+    },
+    {
+      "name": "dream-api.white-list",
+      "type": "java.util.List",
+      "description": "白名单列表（仅在白名单策略时生效）."
     }
   ]
 }

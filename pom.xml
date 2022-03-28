@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>top.vchao</groupId>
     <artifactId>dream-api</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <name>dream-api</name>
     <description>A quick development scaffolding project based on spring Boot API.</description>
     <url>https://github.com/zhengweichao/DreamApi</url>
@@ -90,6 +90,23 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
         <!-- AOP end-->
+
+        <!-- 定时任务 start-->
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-quartz -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-quartz</artifactId>
+            <version>2.6.4</version>
+        </dependency>
+        <!-- 定时任务 end-->
+
+        <!-- 企业微信、钉钉消息推送 start-->
+        <dependency>
+            <groupId>com.github.answerail</groupId>
+            <artifactId>dinger-spring-boot-starter</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+        <!-- 企业微信、钉钉消息推送 end-->
 
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-configuration-processor -->
         <dependency>
