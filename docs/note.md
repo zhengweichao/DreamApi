@@ -29,3 +29,6 @@
 ## 发送消息
 - https://gitee.com/zhongfucheng/austin
 - https://gitee.com/jaemon/dingtalk-spring-boot-starter
+- [spring boot集成spring-boot-starter-mail邮件功能](https://www.cnblogs.com/purely/p/13163980.html)
+- [使用Spring Boot发送邮件_问天星则落的博客](https://blog.csdn.net/qq_39241443/article/details/81293939)
+
