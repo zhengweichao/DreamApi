@@ -10,6 +10,7 @@ import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import top.vchao.dream.v1.exception.BlackIpException;
+import top.vchao.dream.v1.exception.FrequentException;
 import top.vchao.dream.v1.exception.NoWhiteIpException;
 import top.vchao.dream.v1.pojo.response.ErrorResponseData;
 import top.vchao.dream.v1.pojo.response.ResponseEnum;
@@ -90,6 +91,14 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(NoWhiteIpException.class)
     public ErrorResponseData noWhiteIpException(NoWhiteIpException e) {
         return new ErrorResponseData(ResponseEnum.BLACK_IP);
+    }
+
+    /**
+     * 拦截频繁访问错误
+     */
+    @ExceptionHandler(FrequentException.class)
+    public ErrorResponseData noWhiteIpException(FrequentException e) {
+        return new ErrorResponseData(ResponseEnum.BLACK_IP.getCode(), e.getMessage());
     }
 
 }
