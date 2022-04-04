@@ -16,6 +16,7 @@
 
 ## 黑白名单
 - https://blog.csdn.net/java_helloworld_/article/details/106745630
+- [springboot过滤器禁止ip频繁访问](https://blog.csdn.net/qq_37228713/article/details/81662119)
 
 ## 定时任务
 - 在线corn: http://cron.ciding.cc/
