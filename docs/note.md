@@ -32,4 +32,4 @@
 - https://gitee.com/jaemon/dingtalk-spring-boot-starter
 - [spring boot集成spring-boot-starter-mail邮件功能](https://www.cnblogs.com/purely/p/13163980.html)
 - [使用Spring Boot发送邮件_问天星则落的博客](https://blog.csdn.net/qq_39241443/article/details/81293939)
-
+- [springboot发送邮件的几种方式](https://www.cnblogs.com/sun2020/p/13961554.html)
