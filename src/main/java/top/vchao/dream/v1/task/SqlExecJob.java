@@ -20,11 +20,11 @@ public class SqlExecJob extends QuartzJobBean {
 
     @Override
     protected void executeInternal(JobExecutionContext jobExecutionContext) {
-        String userName = (String) jobExecutionContext.getJobDetail().getJobDataMap().get("sqlName");
-        String sql = (String) jobExecutionContext.getJobDetail().getJobDataMap().get("sql");
-
-        Map<String, Object> map = jdbcTemplate.queryForMap(sql);
-        log.info(userName + " ---> " + map.toString());
+//        String userName = (String) jobExecutionContext.getJobDetail().getJobDataMap().get("sqlName");
+//        String sql = (String) jobExecutionContext.getJobDetail().getJobDataMap().get("sql");
+//
+//        Map<String, Object> map = jdbcTemplate.queryForMap(sql);
+//        log.info(userName + " ---> " + map.toString());
     }
 
 }

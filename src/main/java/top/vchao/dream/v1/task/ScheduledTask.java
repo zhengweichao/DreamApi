@@ -18,6 +18,6 @@ public class ScheduledTask {
      */
     @Scheduled(cron = "0 * * * * ?")
     public void execute() {
-        System.out.println("每分钟定时执行的任务----->" + ++i);
+//        System.out.println("每分钟定时执行的任务----->" + ++i);
     }
 }
