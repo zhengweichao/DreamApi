@@ -31,7 +31,7 @@ public class GenCommon {
                     builder.parent(packageName + "." + version + ".modules") // 设置父包名
                             .moduleName(moduleName)
                             .other("")
-                            .pathInfo(Collections.singletonMap(OutputFile.mapperXml, projectDir + "/src/main/resources/mybatis")); // 设置mapperXml生成路径
+                            .pathInfo(Collections.singletonMap(OutputFile.xml, projectDir + "/src/main/resources/mybatis")); // 设置mapperXml生成路径
                 })
                 .injectionConfig(builder -> {
                     builder.customMap(Collections.singletonMap("apiVersion", version))
