@@ -28,7 +28,7 @@ public class GenCommon {
                             .outputDir(projectDir + "/src/main/java/"); // 指定输出目录
                 })
                 .packageConfig(builder -> {
-                    builder.parent(packageName + "." + version) // 设置父包名
+                    builder.parent(packageName + "." + version + ".modules") // 设置父包名
                             .moduleName(moduleName)
                             .other("")
                             .pathInfo(Collections.singletonMap(OutputFile.mapperXml, projectDir + "/src/main/resources/mybatis")); // 设置mapperXml生成路径
