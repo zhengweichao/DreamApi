@@ -1,9 +1,9 @@
 # Docker运行
 
-```shell
-# 构建镜像
-docker build -t api:v1 .
+本项目已经可通过docker-compose运行，具体文件为 /docker/docker-compose.yml。
 
-# 运行容器
-docker run -d -p 8080:8080 --name api api:v1
+> 需要自行拷贝jar文件至java目录下。
+
+```shell
+docker-compose up -d
 ```
