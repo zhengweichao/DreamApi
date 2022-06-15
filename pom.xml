@@ -200,6 +200,12 @@
                 <spring.active>prod</spring.active>
             </properties>
         </profile>
+        <profile>
+            <id>docker</id>
+            <properties>
+                <spring.active>docker</spring.active>
+            </properties>
+        </profile>
     </profiles>
 
     <repositories>

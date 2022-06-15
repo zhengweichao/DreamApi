@@ -1,0 +1,12 @@
+spring:
+  #  数据库设置
+  datasource:
+    url: "jdbc:mysql://mysql:3306/dream?autoReconnect=true\
+          &useUnicode=true&characterEncoding=utf8\
+          &zeroDateTimeBehavior=CONVERT_TO_NULL\
+          &useSSL=false&serverTimezone=Asia/Shanghai\
+          &allowPublicKeyRetrieval=true\
+          &useSSL=false\
+          &nullCatalogMeansCurrent=true"
+    username: root
+    password: Pa33word
