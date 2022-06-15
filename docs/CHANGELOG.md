@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## [v0.0.4]  2022.06.15
+
+- 增加: docker-compose配置
+- 增加: mysql容器化配置以及数据初始化
+- 优化: 代码生成模块代码优化
+- 组件升级：
+  - spring-boot -> 2.6.6
+  - mybatis-plus-generator -> 3.5.2
+  - lombok -> 1.18.24
+  - hutool -> 5.8.2
+
 ## [v0.0.3]  2022.04.09
 
 - 增加: 邮件发送功能；
