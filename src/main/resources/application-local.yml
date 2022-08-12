@@ -5,6 +5,7 @@ spring:
           &useUnicode=true&characterEncoding=utf8\
           &zeroDateTimeBehavior=CONVERT_TO_NULL\
           &useSSL=false&serverTimezone=Asia/Shanghai\
+          &allowPublicKeyRetrieval=true\
           &nullCatalogMeansCurrent=true"
     username: vchao
     password: vchao123
