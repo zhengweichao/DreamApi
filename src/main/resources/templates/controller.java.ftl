@@ -58,7 +58,7 @@ public class ${table.controllerName} {
     }
 
     @PostMapping("/add")
-    public ResponseData add(@Validated(BaseRequest.add.class)${entity}Request request) {
+    public ResponseData add(@ @Validated(BaseRequest.add.class)${entity}Request request) {
         ${table.serviceName?uncap_first}.save(request);
         return ResponseData.success();
     }
