@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## [v0.0.5]  2023.03.21
+
+- 增加: 数据安全保护数据加密方法
+- 优化: post请求增加RequestBody设置
+- 组件升级：
+  - spring-boot -> 2.7.2
+  - lombok -> 1.18.26
+  - hutool -> 5.8.15
+  - dinger -> 2.0.0
+
 ## [v0.0.4]  2022.06.15
 
 - 增加: docker-compose配置
